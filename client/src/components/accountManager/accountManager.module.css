@@ -1,0 +1,88 @@
+.accountManager {
+  width: 100vw;
+  height: 90vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: 0.5s;
+}
+
+.container {
+  width: 20vw;
+  height: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+
+  border-radius: 1vw;
+
+  background-color: var(--second-div-color);
+  
+  transition: 0.5s;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 1vw;
+  
+  transition: 0.5s;
+}
+
+.form > input {
+  border: 0.1vw solid var(--btn-primary);
+  border-radius: 1vw;
+
+  padding: 0.5vw;
+
+  background-color: var(--background-color);
+  
+  transition: 0.5s;
+}
+
+.form > input:hover, input:focus {
+  border: 0.1vw solid var(--btn-primary-hover);
+
+  outline: none;
+  
+  transition: 0.5s;
+}
+
+.form > input:focus {
+  background-color: var(--second-div-color);
+  
+  transition: 0.5s;
+}
+
+.butn {
+  border: 0.1vw solid var(--btn-primary);
+  border-radius: 1vw;
+
+  padding: 0.5vw;
+
+  background-color: var(--background-color);
+
+  transition: 0.5s;
+}
+
+.butn:hover {
+  background-color: var(--second-div-color);
+
+  transition: 0.5s;
+}
+
+.infoMessage {
+  width: 80%;
+
+  padding: 1vw;
+
+  background-color: var(--light-yellow);
+  border-radius: 1vw;
+}

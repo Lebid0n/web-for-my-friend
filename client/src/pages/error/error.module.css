@@ -1,0 +1,33 @@
+.errorPage {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--error-background)
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorIcon {
+  width: 5vw;
+  height: 5vw;
+
+  color: var(--error-text);
+}
+
+.errorMessage {
+  font-size: 2vw;
+}
+
+.helpLink {
+  font-size: 1vw;
+  text-decoration: none;
+}

@@ -1,0 +1,56 @@
+:root {
+  /* Основные цвета из палитры для светлой темы */
+  --deep-blue: #022B3A;     /* Темно-синий (верхний заголовок) */
+  --vibrant-blue: #1F7ABC;  /* Ярко-синий (середина) */
+  --dark-vibrant-blue: #16629c; /* Тёмно синий (для поля ввода) */
+  --light-blue: #BFDBF7;    /* Светло-голубой */
+  --pale-blue: #E1E5F2;     /* Бледно-голубой */
+  --pure-white: #FFFFFF;    /* Белый */ 
+  --black: #000000; /* как в попе негра */
+  --red: #ff0000; /* красный */
+  --light-red: #ffb0b0; /* светлокрасный */
+  --light-yellow: #ffec8d;
+  --yellow: #ffe149;
+
+  /* Готовая цветовая схема для html элементов */
+    --background-color: var(--pure-white);
+    
+    /* text/svg */
+    --default-text: var(var(--black));
+    
+    /* divs */
+    --div-color: var(--light-blue);
+    --second-div-color: var(--pale-blue); 
+    --third-div-color: var(--vibrant-blue);
+    
+    /* elements */
+    --element-color: var(--deep-blue);
+    --element-hovered: var(--vibrant-blue);
+    
+    /* buttons */
+    --btn-primary: var(--vibrant-blue);
+    --btn-primary-hover: var(--dark-vibrant-blue);
+    
+    /* Inputs */
+    --input-border: var(--pale-blue);
+    --input-focus: var(--light-blue);
+    
+    /* footer */
+    --footer-bg: var(--deep-blue);
+    --footer-text: var(--pure-white);
+
+    /* error */
+    --error-background: var(--light-red);
+    --error-text: var(--red);
+
+    /* task background */
+    --task-background: var(--light-yellow);
+    --task-underline: var(--yellow);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--background-color);
+    color: black;
+  }
+}

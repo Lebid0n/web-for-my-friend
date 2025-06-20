@@ -1,0 +1,80 @@
+.taskList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 200px;
+  max-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid var(--yellow);
+  border-radius: 8px;
+  background-color: var(--task-background);
+  padding: 12px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.h1 {
+  width: 10vw;
+  max-height: 1.8vw;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  text-align: center;
+  padding: 4px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.container > div:nth-child(2) { /* Контейнер для описания */
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.container > div:nth-child(2) > p {
+  width: 100%;
+  font-size: 0.9rem;
+  overflow-y: auto;
+  word-break: break-word;
+  padding: 8px;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.deleteButn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--error-background);
+  color: var(--error-text);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.deleteButn > svg {
+  width: 14px;
+  height: 14px;
+}

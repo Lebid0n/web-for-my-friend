@@ -1,0 +1,78 @@
+.containerBox {
+  display: flex;
+}
+
+.info {
+  width: 75vw;
+  height: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+
+  border-radius: 1vw;
+
+  margin: 1vw;
+
+  background-color: var(--div-color);
+
+  font-size: 1vw;
+}
+
+.info > p {
+  width: 70%;
+}
+
+.container {
+  width: 20vw;
+  height: 20vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+
+  border-radius: 1vw;
+
+  margin: 1vw;
+
+  background-color: var(--div-color);
+
+  font-size: 1vw;
+}
+
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
+.formData > input, button {
+  border-radius: 1vw;
+
+  padding: 0.5vw;
+}
+
+.inputs {
+  border: 0.1vw solid var(--input-border);
+}
+
+.inputs:focus {
+  border: 0.1vw solid var(--btn-primary-hover);
+  outline: none;
+}
+
+.button {
+  border: 0.1vw solid var(--btn-primary);
+  background-color: var(--background-color);
+
+  transition: 0.5s;
+}
+
+.button:hover {
+  border: 0.1vw solid var(--btn-primary-hover);
+  background-color: var(--div-color)
+}

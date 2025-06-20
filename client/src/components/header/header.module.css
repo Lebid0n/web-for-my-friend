@@ -1,0 +1,110 @@
+.header {
+  height: 10vh;
+  width: 100vw;
+
+  padding: 1vw;
+
+  display: flex;
+
+  background-color: var(--deep-blue);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+
+  width: 50%;
+
+  background-color: var(--deep-blue);
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+.container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1vw;
+
+  width: 50%;
+
+  background-color: var(--deep-blue);
+}
+
+.functionalButns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 25%;
+}
+
+.langButn {
+  width: 2vw;
+  height: 2vw;
+
+  border: none;
+  border-radius: 50%;
+
+  transition: 0.5s;
+}
+
+.langButn:hover {
+  width: 2.2vw;
+  height: 2.2vw;
+
+  background-color: var(--light-blue);
+
+  transition: 0.5s;
+}
+
+.langButn > svg {
+  width: 75%;
+  height: 75%;
+
+  cursor: pointer;
+}
+
+.loginButn {
+  width: 2vw;
+  height: 2vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--background-color);
+  color: var(--default-text);
+
+  transition: 0.5s;
+}
+
+.loginButn:hover {
+  width: 2.2vw;
+  height: 2.2vw;
+
+  background-color: var(--light-blue);
+
+  transition: 0.5s;
+}
+
+.loginButn > svg {
+  width: 75%;
+  height: 75%;
+
+  cursor: pointer;
+}
+
+.flag {
+  width: 5vw;
+  height: 95%;
+
+  border-radius: 0.5vw;
+}
