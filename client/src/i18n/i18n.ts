@@ -12,12 +12,13 @@ i18n.use(initReactI18next).init({
         "description": "description",
         "greeting!": "Greeting!",
         "myInfo": "Planning your daily routine is key to productivity. For your convenience, I suggest following 3 simple rules when creating tasks: Keep descriptions short, Make them easily achievable, Ensure they sound logical and clear, for understanding.",
-        "gl": "Good luck!",
+        "gl": "if your task is green click it to see image!",
         "myName": "Sharipov Karim",
         "userName": "name:",
         "userPaswrd": "password:",
         "Register": "Register",
         "edit": "edit",
+        "img": "image",
       }
     },
     ru: {
@@ -29,12 +30,13 @@ i18n.use(initReactI18next).init({
         "description": "описание",
         "greeting!": "Приветствую!",
         "myInfo": "Ведение заметок это ключ повышению продуктивности, для удобства советую использовать моё правило \"3-ёx Л\": Лаконизм, легкость, логика.",
-        "gl": "Успехов вам!",
+        "gl": "Если ваша заметка зелёная кликните на неё, чтобы увидеть картинку!",
         "myName": "Шарипов Карим",
         "userName": "имя:",
         "userPaswrd": "пароль:",
         "Register": "Регистрация",
         "edit": "редактировать",
+        "img": "изображение",
       }
     }
   },

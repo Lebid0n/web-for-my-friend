@@ -76,3 +76,10 @@
   border: 0.1vw solid var(--btn-primary-hover);
   background-color: var(--div-color)
 }
+
+.imgInput {
+  border: 0.1vw solid var(--input-border);
+  background-color: var(--background-color);
+
+  color: var(--default-text);
+}

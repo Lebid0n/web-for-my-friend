@@ -21,7 +21,7 @@
   padding: 12px;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .h1 {
@@ -41,14 +41,14 @@
 .container > div:nth-child(2) { /* Контейнер для описания */
   width: 100%;
   flex-grow: 1;
-  overflow: hidden;
+  overflow: scroll;
   display: flex;
 }
 
 .container > div:nth-child(2) > p {
   width: 100%;
   font-size: 0.9rem;
-  overflow-y: auto;
+  overflow-y: scroll;
   word-break: break-word;
   padding: 8px;
   margin: 0;
@@ -77,4 +77,11 @@
 .deleteButn > svg {
   width: 14px;
   height: 14px;
+}
+
+.previewImage {
+  width: 9vw;
+  height: 9vw;
+  margin-top: 1vw;
+  border-radius: 1vw;
 }

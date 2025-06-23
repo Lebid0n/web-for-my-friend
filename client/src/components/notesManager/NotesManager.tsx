@@ -6,13 +6,15 @@ import styles from './taskManager.module.css'
 interface TaskData {
   name: string;
   description: string;
+  img: string; // base64 строка
 }
 
 function TaskManager() {
   const { t } = useTranslation();
   const [taskData, setTaskData] = useState<TaskData>({
     name: '',
-    description: ''
+    description: '',
+    img: ''
   });
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -21,6 +23,20 @@ function TaskManager() {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      setTaskData(prev => ({
+        ...prev,
+        img: reader.result as string
+      }));
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleSubmit = (e: FormEvent) => {
@@ -34,14 +50,14 @@ function TaskManager() {
     
     setTaskData({
       name: '',
-      description: ''
+      description: '',
+      img: '',
     });
 
     window.location.reload();
   };
 
   return (
-    <>
     <div className={styles.containerBox}>
       <div className={`${styles.container} nunito`}>
         <p>{t("Create new task:")}</p>
@@ -63,6 +79,12 @@ function TaskManager() {
             onChange={handleInputChange}
             className={`${styles.inputs} nunito`}
           />
+          <input 
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className={`${styles.imgInput} nunito`}
+          />
           <button type="submit" className={`${styles.button} nunito`}>{t("Create")}</button>
         </form>
       </div>
@@ -72,7 +94,6 @@ function TaskManager() {
         <p>{t("gl")} <i>P.S. {t("myName")}</i></p>
       </div>
     </div>
-    </>
   );
 }
 
