@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import type { FormEvent, ChangeEvent } from 'react';
-import styles from './taskManager.module.css'
+import styles from './taskManager.module.css';
 
 interface TaskData {
   name: string;
@@ -41,13 +41,16 @@ function TaskManager() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    
+
     const taskId = Date.now().toString();
+    const createdAt = new Date().toISOString(); // Добавление даты
+
     localStorage.setItem(taskId, JSON.stringify({
       ...taskData,
-      id: taskId
+      id: taskId,
+      date: createdAt // ← ВСТАВЛЕННОЕ ПОЛЕ ДАТЫ
     }));
-    
+
     setTaskData({
       name: '',
       description: '',

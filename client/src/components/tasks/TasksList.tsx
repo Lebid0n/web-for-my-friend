@@ -43,6 +43,9 @@ function TasksList() {
     const tasks = getTasks();
     return tasks.map((task) => {
       const hasImage = Boolean(task.img);
+      const formattedDate = task.date
+        ? new Date(task.date).toLocaleString()
+        : null;
 
       return (
         <div
@@ -58,6 +61,7 @@ function TasksList() {
         >
           <div>
             <h3 className={style.h1} title={task.name}>{task.name}</h3>
+
             {showImageForKey === task.storageKey && task.img ? (
               <img
                 src={task.img}
@@ -66,7 +70,14 @@ function TasksList() {
                 style={{ maxWidth: '100%', maxHeight: 200, borderRadius: 8, objectFit: 'cover' }}
               />
             ) : (
-              <p>{task.description || 'Нет описания'}</p>
+              <>
+                <p>{task.description || 'Нет описания'}</p>
+                {formattedDate && (
+                  <p className={style.date}>
+                    <small>{formattedDate}</small>
+                  </p>
+                )}
+              </>
             )}
           </div>
 
